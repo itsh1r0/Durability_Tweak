@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Specification-Title: durability_tweak
+Specification-Vendor: ItsukaHiro
+Specification-Version: 1
+Implementation-Title: DurabilityTweak
+Implementation-Version: 1.0
+Implementation-Vendor: ItsukaHiro
+Implementation-Timestamp: 2025-03-09T19:44:00+0700
+MixinConfigs: durability_tweak.mixins.json
+

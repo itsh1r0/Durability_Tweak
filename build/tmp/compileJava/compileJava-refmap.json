@@ -1,0 +1,42 @@
+{
+  "mappings": {
+    "itsh1r0/durability/tweaks/mixins/AnvilMenuMixin": {
+      "createResult": "Lnet/minecraft/world/inventory/AnvilMenu;m_6640_()V"
+    },
+    "itsh1r0/durability/tweaks/mixins/MendingExpMixin": {
+      "Lnet/minecraft/world/entity/player/Player;takeXpDelay:I": "Lnet/minecraft/world/entity/player/Player;f_36101_:I",
+      "repairPlayerItems": "Lnet/minecraft/world/entity/ExperienceOrb;m_147092_(Lnet/minecraft/world/entity/player/Player;I)I",
+      "playerTouch": "Lnet/minecraft/world/entity/ExperienceOrb;m_6123_(Lnet/minecraft/world/entity/player/Player;)V"
+    },
+    "itsh1r0/durability/tweaks/mixins/AnvilScreenMixin": {
+      "renderLabels": "Lnet/minecraft/client/gui/screens/inventory/AnvilScreen;m_280003_(Lnet/minecraft/client/gui/GuiGraphics;II)V"
+    },
+    "itsh1r0/durability/tweaks/mixins/UnbreakingMixin": {
+      "shouldIgnoreDurabilityDrop": "Lnet/minecraft/world/item/enchantment/DigDurabilityEnchantment;m_220282_(Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/util/RandomSource;)Z",
+      "getMinCost": "Lnet/minecraft/world/item/enchantment/DigDurabilityEnchantment;m_6183_(I)I",
+      "getMaxLevel": "Lnet/minecraft/world/item/enchantment/DigDurabilityEnchantment;m_6586_()I",
+      "getMaxCost": "Lnet/minecraft/world/item/enchantment/DigDurabilityEnchantment;m_6175_(I)I"
+    }
+  },
+  "data": {
+    "searge": {
+      "itsh1r0/durability/tweaks/mixins/AnvilMenuMixin": {
+        "createResult": "Lnet/minecraft/world/inventory/AnvilMenu;m_6640_()V"
+      },
+      "itsh1r0/durability/tweaks/mixins/MendingExpMixin": {
+        "Lnet/minecraft/world/entity/player/Player;takeXpDelay:I": "Lnet/minecraft/world/entity/player/Player;f_36101_:I",
+        "repairPlayerItems": "Lnet/minecraft/world/entity/ExperienceOrb;m_147092_(Lnet/minecraft/world/entity/player/Player;I)I",
+        "playerTouch": "Lnet/minecraft/world/entity/ExperienceOrb;m_6123_(Lnet/minecraft/world/entity/player/Player;)V"
+      },
+      "itsh1r0/durability/tweaks/mixins/AnvilScreenMixin": {
+        "renderLabels": "Lnet/minecraft/client/gui/screens/inventory/AnvilScreen;m_280003_(Lnet/minecraft/client/gui/GuiGraphics;II)V"
+      },
+      "itsh1r0/durability/tweaks/mixins/UnbreakingMixin": {
+        "shouldIgnoreDurabilityDrop": "Lnet/minecraft/world/item/enchantment/DigDurabilityEnchantment;m_220282_(Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/util/RandomSource;)Z",
+        "getMinCost": "Lnet/minecraft/world/item/enchantment/DigDurabilityEnchantment;m_6183_(I)I",
+        "getMaxLevel": "Lnet/minecraft/world/item/enchantment/DigDurabilityEnchantment;m_6586_()I",
+        "getMaxCost": "Lnet/minecraft/world/item/enchantment/DigDurabilityEnchantment;m_6175_(I)I"
+      }
+    }
+  }
+}

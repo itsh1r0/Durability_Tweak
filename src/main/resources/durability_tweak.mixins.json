@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "itsh1r0.durability.tweaks.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "durability_tweak.refmap.json",
+  "mixins": [
+    "AnvilMenuMixin",
+    "MendingExpMixin",
+    "UnbreakingMixin"
+  ],
+  "client": [
+    "AnvilScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
