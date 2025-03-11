@@ -6,8 +6,6 @@
   "refmap": "durability_tweak.refmap.json",
   "mixins": [
     "AnvilMenuMixin",
-    "EnchantValueArmorMixin",
-    "EnchantValueToolsMixin",
     "MendingExpMixin",
     "UnbreakingMixin"
   ],
