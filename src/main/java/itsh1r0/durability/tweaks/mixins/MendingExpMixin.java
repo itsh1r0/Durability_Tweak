@@ -44,7 +44,7 @@ public class MendingExpMixin {
             int expRemain = 0, unbreakingLevel = item.getEnchantmentLevel(Enchantments.UNBREAKING);;
             RandomSource RNG = RandomSource.create();
             for (int i = amount; i > 0; i--)
-                if (RNG.nextInt(unbreakingLevel + 3) == 0)
+                if (RNG.nextInt(unbreakingLevel+2) == 0)
                     expRemain++;
             item.setDamageValue(Mth.clamp(item.getDamageValue() - expRemain, minDMG, item.getMaxDamage()));
         }
