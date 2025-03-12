@@ -28,28 +28,11 @@ public class MendingExpMixin {
 
     @Inject(method = "repairPlayerItems", at = @At("HEAD"), cancellable = true)
     public void repairItem(Player player, int amount, CallbackInfoReturnable<Integer> cir) {
-        Map.Entry<EquipmentSlot, ItemStack> checkFirst = EnchantmentHelper.getRandomItemWith(Enchantments.MENDING, player);
-        if (checkFirst == null) {
+        if (!durabilityTweak$hasMending(player)) {
             cir.setReturnValue(amount);
             cir.cancel();
             return;
         }
-//        Map.Entry<EquipmentSlot, ItemStack> entry = EnchantmentHelper.getRandomItemWith(Enchantments.MENDING, player, ItemStack::isDamaged);
-//        if (entry != null) {
-//            ItemStack item = entry.getValue();
-//            int minDMG = 0, unbreakingLevel = item.getEnchantmentLevel(Enchantments.UNBREAKING);
-//            float dmgRatio = 9F / (6 + 4*unbreakingLevel);
-//            if (item.getDamageValue() > minDMG) {
-//                if (unbreakingLevel != 0)
-//                    minDMG = item.getMaxDamage() - (int) (item.getMaxDamage() * dmgRatio);
-//                RandomSource RNG = RandomSource.create();
-//                int expRemain = 0;
-//                for (int i = amount; i > 0; i--)
-//                    if (RNG.nextInt(unbreakingLevel + 3) == 0)
-//                        expRemain++;
-//                item.setDamageValue(Mth.clamp(item.getDamageValue() - expRemain, minDMG, item.getMaxDamage()));
-//            }
-//        }
         HashMap<ItemStack, Integer> selectItems = durabilityTweak$getItemList(player);
         if (!selectItems.isEmpty()) {
 
@@ -68,6 +51,17 @@ public class MendingExpMixin {
 
         cir.setReturnValue(0);
         cir.cancel();
+    }
+
+    @Unique
+    private boolean durabilityTweak$hasMending(Player player) {
+        for (EquipmentSlot slot : EquipmentSlot.values()) {
+            ItemStack item = player.getItemBySlot(slot);
+            if (!item.isEmpty() && item.getEnchantmentLevel(Enchantments.MENDING) > 0) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Unique
